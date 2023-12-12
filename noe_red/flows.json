@@ -1,0 +1,173 @@
+[
+    {
+        "id": "74bfb5eb5278cc28",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2f1b9a2c87493527",
+        "type": "ui_button",
+        "z": "74bfb5eb5278cc28",
+        "name": "",
+        "group": "622f19a3ac112f4d",
+        "order": 8,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "bt_start",
+        "tooltip": "",
+        "color": "Black",
+        "bgcolor": "Green",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 60,
+        "wires": [
+            [
+                "35bf5797a2cf9853"
+            ]
+        ]
+    },
+    {
+        "id": "35bf5797a2cf9853",
+        "type": "s7 out",
+        "z": "74bfb5eb5278cc28",
+        "endpoint": "e1a602dff4ab98f7",
+        "variable": "cmd1",
+        "name": "",
+        "x": 370,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "3f4292a8473dce79",
+        "type": "ui_button",
+        "z": "74bfb5eb5278cc28",
+        "name": "",
+        "group": "622f19a3ac112f4d",
+        "order": 8,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "bt_stop",
+        "tooltip": "",
+        "color": "White",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "35bf5797a2cf9853"
+            ]
+        ]
+    },
+    {
+        "id": "38ac813b3b2adc8b",
+        "type": "s7 in",
+        "z": "74bfb5eb5278cc28",
+        "endpoint": "e1a602dff4ab98f7",
+        "mode": "single",
+        "variable": "Led_1",
+        "diff": true,
+        "name": "Led_1",
+        "x": 130,
+        "y": 180,
+        "wires": [
+            [
+                "d59535e118bf53a5"
+            ]
+        ]
+    },
+    {
+        "id": "d59535e118bf53a5",
+        "type": "ui_led",
+        "z": "74bfb5eb5278cc28",
+        "order": 2,
+        "group": "622f19a3ac112f4d",
+        "width": "3",
+        "height": "3",
+        "label": "led_1",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "",
+        "x": 350,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "622f19a3ac112f4d",
+        "type": "ui_group",
+        "name": "PLC_S7-1200 Dashboard",
+        "tab": "5c0ec82bdb21b990",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e1a602dff4ab98f7",
+        "type": "s7 endpoint",
+        "transport": "iso-on-tcp",
+        "address": "192.168.0.1",
+        "port": "102",
+        "rack": "0",
+        "slot": "1",
+        "localtsaphi": "01",
+        "localtsaplo": "00",
+        "remotetsaphi": "01",
+        "remotetsaplo": "00",
+        "connmode": "rack-slot",
+        "adapter": "",
+        "busaddr": "2",
+        "cycletime": "1000",
+        "timeout": "2000",
+        "name": "",
+        "vartable": [
+            {
+                "addr": "M1.0",
+                "name": "cmd1"
+            },
+            {
+                "addr": "Q0.0",
+                "name": "Led_1"
+            }
+        ]
+    },
+    {
+        "id": "5c0ec82bdb21b990",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "Dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

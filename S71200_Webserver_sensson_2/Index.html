@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="FB/jquery-3.2.1.min.js"></script>
+        <script src="FB/raphael.2.1.0.min.js"></script>
+        <script src="FB/justgage.1.0.1.min.js"></script>
+        <!-- ////////////// GỌI CÁC CSS //////////////  -->
+        <link rel="stylesheet" href= "CSS/button.css">
+        <link rel="stylesheet" href= "CSS/main_Screen.css">
+        <link rel="stylesheet" href="CSS/screen_1.css">
+        <link rel="stylesheet" href="CSS/screen_2.css">
+        <link rel="stylesheet" href="CSS/slidebar.css">
+        <link rel="stylesheet" href="CSS/login.css">
+
+        <title>Scada Webserver</title>       <!-- ten web a ma hehe-->
+        <!-- ////////////// CHƯƠNG TRÌNH CON //////////////  -->
+        <script src="FC/FC1_Common.js"></script>
+        <script src="FC/FC2_UserManagerment.js"></script>
+
+        <!-- /// Chuong Trình Đăng Nhập và Phân Quyền Cho Hệ Thống-->
+        <div id="div_login">
+            <div id="id01" class="modal">
+                <form id="modal-content1" class="mdal-content animate">
+                    <div id="img_container" class="imgcontainer">
+                        <span id="closebtt" onclick="document.getElementById('id01').style.display='none';logout();" class="close" title="">X</span>
+                        <img id="img_avatar" src="images/user.png" alt="Avatar" class="avatar">
+                    </div>
+
+                    <div id="log_container" class="container">
+                        <label for="uname"><b>Username</b></label>
+                        <input id="inputuser" type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="psw"><b>PassWord</b></label>
+                        <input id="inputpass" type="password" placeholder="Enter Password" name="psw" required>
+
+                        <button id="bttlogin1" type="button" onclick="login();">Login</button>   
+                        <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remmember Me
+                        </label>
+                    </div>
+
+                    <div id="login_container" class="container" style="background-color:#f1f1f1;">
+                        <button id= "bttcancle" type="button" onclick="document.getElementById('id01').style.display='none';logout();" class="cancle" title="">Cancel</button>
+                        <span id="psw" class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </head>
+        <!-- Phần thân của website -->
+    <body>
+        <!-- // code cho Slidebar // -->
+            <div id= "slidebar" >
+                <!-- nut chon man hinh chinh-->
+                <button class="button" id="btt_Screen_main" onclick="
+                fn_ScreenChange('ScreenMain','Screen_1','Screen_2');  
+                btt_Auto(); 
+                ">Màn hình chính</button>
+                <!-- Nut chọn màn hình 1-->
+                <button class="button" id="btt_Screen_1" onclick="
+                fn_ScreenChange('Screen_1','ScreenMain','Screen_2');
+                ">Màn Hinh 1</button>
+                <!-- nút chọn màn hình 2-->
+                <button class="button" id="btt_Screen_2" onclick="
+                fn_ScreenChange('Screen_2','ScreenMain','Screen_1');
+                ">Màn Hình 2</button>
+            </div>
+            
+        <div class="container">
+            <!-- // Trang main // -->
+            <div id="ScreenMain" class="page active">
+            <!--Tag dạng Bool-->
+                <label>Tag dạng bool:</label>
+                <input id="tbx_tag_Bool" disabled="disabled" type="text" />    
+                <br /><br />
+                <!--Tag dạng Byte-->
+                <label>Tag dạng Byte:</label>
+                <input id="tbx_tag_Byte" disabled="disabled" type="text" />    
+                <br /><br />
+                <!--Tag dạng số nguyên-->
+                <label>Tag dạng Integer:</label>
+                <input id="tbx_tag_Integer" disabled="disabled" type="text" />    
+                <br /><br />
+                <!--Tag dạng số nguyên-->
+                <label>READ HOLDING REGISTER PLC NX1P2:</label>
+                <input id="tbx_tag_Integer_2" disabled="disabled" type="text" />    
+                <br /><br />
+                
+                <!--Tag dạng số thực-->
+                <label>Tag dạng số thực:</label>
+                <input id="tbx_tag_Real" disabled="disabled" type="text" />    
+                <br /><br />
+                <!--Tag dạng string-->
+                <label>Tag dạng string:</label>
+                <input id="tbx_tag_String" disabled="disabled" type="text" />    
+                <br /><br />
+                <!-- Nút nhấn lưu-->
+                <button id="btt_Save" onmousedown="fn_Saving()">LƯU</button>
+                <!-- Nút nhấn sửa-->
+                <button id="btt_Edit" onmousedown="fn_Edditing()">SỬA</button>
+            </div>
+
+            <!-- // Trang man hinh 1 // -->
+            <div id ="Screen_1" class="page">
+                <p> Đây Là Trang Giao Diện Màn Hình 1</p>
+                <!-- *** Tao 1 doi tuong sybol có tem la Pump1 *** -->
+                <img id="Pump_1">
+            </div>
+            <!--  // Trang Màn Hình 2 // -->
+            <div id = "Screen_2" class="page">
+                <p> Đây Là Trang Giao Diện Màn Hình 2</p>
+            </div>
+        </div>
+    </body>
+</html>

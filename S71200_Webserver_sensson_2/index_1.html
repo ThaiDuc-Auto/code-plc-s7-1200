@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="FB/jquery-3.2.1.min.js"></script>
+        <script src="FB/raphael.2.1.0.min.js"></script>
+        <script src="FB/justgage.1.0.1.min.js"></script>
+        <!-- ////////////// GỌI CÁC CSS //////////////  -->
+        <link rel="stylesheet" href= "CSS/button.css">
+        <link rel="stylesheet" href= "CSS/main_Screen.css">
+        <title>Scada Webserver</title>       <!-- ten web a ma hehe-->
+
+
+        <!-- ////////////// CHƯƠNG TRÌNH CON js  //////////////  -->
+        <script src="FC/FC1_Common.js"></script>
+    </head>
+
+    <!-- Phần thân của website -->
+    <body>
+          <!--Tag dạng Bool-->
+        <label>Tag dạng bool:</label>
+        <input id="tbx_tag_Bool" disabled="disabled" type="text" />    
+        <br /><br />
+        <!--Tag dạng Byte-->
+        <label>Tag dạng Byte:</label>
+        <input id="tbx_tag_Byte" disabled="disabled" type="text" />    
+        <br /><br />
+        <!--Tag dạng số nguyên-->
+        <label>Tag dạng Integer:</label>
+        <input id="tbx_tag_Integer" disabled="disabled" type="text" />    
+        <br /><br />
+         <!--Tag dạng số nguyên-->
+         <label>rEAD HOLDING REGISTER PLC NX1P2:</label>
+         <input id="tbx_tag_Integer_2" disabled="disabled" type="text" />    
+         <br /><br />
+        
+        <!--Tag dạng số thực-->
+        <label>Tag dạng số thực:</label>
+        <input id="tbx_tag_Real" disabled="disabled" type="text" />    
+        <br /><br />
+        <!--Tag dạng string-->
+        <label>Tag dạng string:</label>
+        <input id="tbx_tag_String" disabled="disabled" type="text" />    
+        <br /><br />
+        <!-- Nút nhấn lưu-->
+        <button id="btt_Save" onmousedown="fn_Saving()">LƯU</button>
+        <!-- Nút nhấn sửa-->
+        <button id="btt_Edit" onmousedown="fn_Edditing()">SỬA</button>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+/* // Code cho Màn Hình 1 // */ 
+#Screen_1{
+    position: absolute;
+    left: 215px;top: 11px;
+    width: 1500px; height: 900;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}

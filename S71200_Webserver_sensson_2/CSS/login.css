@@ -1,0 +1,131 @@
+/*  Thẻ Login*/
+/*   //  Div login   //  */
+#login_welcome{
+    position: fixed;
+    left: 700px; top: 400px;
+    font-size: 19 px;
+    color: rgb(4,33,44);
+
+} 
+/*   ***** Font ***** */
+#modal{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*  Full-width inout Filed*/
+#inputuser[type=text], #inputpass[type=password]{
+    width:100%;
+    padding: 12px  20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/**/
+#bttlogin1,#bttcancle {
+    background-color: #04aa6d;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+   button:hover{
+    opacity: 0.8;
+   }
+
+/* chon kieu style cua nut button nha pro*/
+#bttcancle{
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/*center image and possition the close button*/
+#img_container{
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+} 
+
+#img_avatar{
+    width: 40%;
+    border-radius: 50%;
+}
+
+#log_container,  #login_container{
+    padding: 16px;
+}
+
+#psw{
+    float: right ;
+    padding-top: 16px;
+}
+
+/*The modal - backgroup*/
+#id01{
+    position: fixed; /* Stay in place*/ 
+    z-index: 5;      /* Sit on top*/
+    left: 0;
+    top: 0;
+    width: 100% ;    /* FULL width*/
+    height: 100%;    /* FULL height*/
+    overflow: auto;  /* enable scroll if needed*/
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.85); /*balack opacity*/
+    padding-top: 60px;
+}  
+
+/*   --- Modal content / Box ---*/
+#modal-content1{
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top ,15%from the bottom and centered */
+    border: 1px solid #888;
+    width: 30%  /* could be more or less, depending on screen size*/;
+    height: 610px ; /* could be more or less, depending on screen size*/;
+} 
+ 
+/** The close button (X)*/
+#closebtt{
+    position:absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#closebtt:hover,
+#closebtt:focus{
+    color: red;
+    cursor: pointer;
+}
+
+/* Add zoom Animation */
+.animate{
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom{
+    from{-webkit-transform: scale(0)}
+    to{-webkit-transform: scale(1)}
+
+}
+
+@keyframes animatezoom{
+    from{-webkit-transform: scale(0)}
+    to{-webkit-transform: scale(1)}
+}
+
+/* ---  change style for span and cancel button on extra small screen  --- */
+@media screen and (max-width :300px) {
+    span.psw{
+        display: block;
+        float: none;
+    }
+    .canclebtn{
+        width: 100%;
+    }
+}

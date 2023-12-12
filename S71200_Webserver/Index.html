@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang Đăng nhập</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 150px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 5px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 8px 12px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Kiểm tra thông tin đăng nhập (thay thế bằng mã xử lý của bạn)
+            if (username === "admin" && password === "password") {
+                // Chuyển hướng đến trang khác
+                window.location.href = "index_1.html";
+            } else {
+                alert("Thông tin đăng nhập không chính xác. Vui lòng thử lại!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Hệ Thống Giám Sát PLC S7-1200</h1>
+        <h2>Đăng nhập</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">Tên người dùng:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="button" class="btn" onclick="login()">Đăng nhập</button>
+        </form>
+    </div>
+</body>
+</html>

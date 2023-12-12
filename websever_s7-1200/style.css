@@ -1,0 +1,17 @@
+*{
+    width: 100%;
+}
+#tieu-de{
+    font-size: 30px;             /* co chu */
+    color: blue;               /*mau chu */
+    text-transform: uppercase;    /* kieu chu  thuong hay chu hoa*/
+    font-weight: bold;            /* kieu chu in dam*/
+    text-align: center;           /* canh le chu */
+    margin-top: 20px;             /* khoảng cách giũa các hàng  */
+}
+
+#data{
+  font: 21px;
+  color: black;
+  margin-top: 10px;
+}

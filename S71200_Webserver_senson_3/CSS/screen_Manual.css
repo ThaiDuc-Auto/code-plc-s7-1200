@@ -1,0 +1,8 @@
+
+/* // Màn Hình Chính // */ 
+#Screen_Manual{
+    position: absolute;
+    left: 215px;top: 10px;
+    width: 1500px; height: 700px;
+    background-color: rgb(255, 255, 255); 
+}

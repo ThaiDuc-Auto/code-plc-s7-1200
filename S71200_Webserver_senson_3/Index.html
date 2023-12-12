@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="FB/jquery-3.2.1.min.js"></script>
+        <script src="FB/raphael.2.1.0.min.js"></script>
+        <script src="FB/justgage.1.0.1.min.js"></script>
+        <!-- ////////////// GỌI CÁC CSS //////////////  -->
+        <link rel="stylesheet" href= "CSS/screen_Auto.css">
+        <link rel="stylesheet" href="CSS/screen_Manual.css">
+        <link rel="stylesheet" href="CSS/slidebar.css">
+
+        <title>Scada Webserver</title>       <!-- ten web a ma hehe-->
+        <!-- ////////////// CHƯƠNG TRÌNH CON //////////////  -->
+        <script src="FC/FC1_Common.js"></script>
+
+        <!-- Phần thân của website -->
+    <body>
+        <!-- // code cho Slidebar // -->
+            <div id= "slidebar" >
+                <!-- nut chon man hinh chinh-->
+                <button class="button" id="btt_Screen_Auto" onclick="
+                fn_ScreenChange('Screen_Auto','Screen_Manual');  
+                btt_Auto(); 
+                ">Chế độ tự động</button>
+                <!-- Nut chọn màn hình 1-->
+                <button class="button" id="btt_Screen_Manual" onclick="
+                fn_ScreenChange('Screen_Manual','Screen_Auto');
+                ">Chế Độ Tay</button>
+            </div>
+            <!-- // Code cho che do tu động  // -->
+        <div id ="Screen_Auto">
+            <p> Chế Dộ Tự Động</p>
+        </div>
+
+
+            <!--  // Code cho che do chay Tay // -->
+        <div id = "Screen_Manual">
+            <p> Chế Độ Tay</p>
+        </div>
+
+    </body>
+</html>

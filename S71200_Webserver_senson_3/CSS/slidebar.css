@@ -1,0 +1,46 @@
+/* /// Slidebar Chinh  /// */
+#slidebar {
+   position:absolute;
+   left: 5px;top: 11px;
+   width: 198px; height: 768px;
+   background-color: rgb(40,58,127);
+}
+/* // Nút Nhân auto*/
+#btt_Screen_Auto {
+    border: none;
+    background-color: rgb(233,15,149);
+    color: rgb(red, green, blue);
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute;
+    width:150px; height: 40px;
+    left: 22px; top: 20px;
+}
+/* // Nút Nhấn Manual// */
+#btt_Screen_Manual{  
+    background-color: rgb(200, 230, 32);
+    color: rgb(13, 14, 10);
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute;
+    width:150px; height: 40px;
+    left: 22px; top: 70px;
+}
+#btt_Screen_2{
+    background-color: rgb(17, 224, 103);
+    color: rgb(184, 139, 17);
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute;
+    width:150px; height: 40px;
+    left: 22px; top: 120px;
+}

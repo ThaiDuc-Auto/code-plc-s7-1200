@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <!-- phan than cua filr html-->
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+       <!-- <meta http-equiv="">  --><!--thẻ<meta> : định nghĩa siêu dữ liệu về 1 tài liệu hmtl-->
+        <script src="jquery-2.0.2.min.js"></script>
+        <title>WELLCOM WEBSERVER S7-1200 </title>
+    </head>
+    <body>
+        <!-- phan tieu de cua trang web-->
+        <div id="tieu-de">
+            Wellcom to lesson 1 webserver s7-1200
+        </div>
+        <div id="data">
+            <ul> <!--the: dinh nghia 1 danh sach khong cos thu tuwj-->
+                 <li><label id="Start">Start:</label></li> <!-- thẻ <li>: dinh nghia 1 danh sach-->
+                 <li><label id="Stop">Stop:67</label></li> <!--Định nghĩa một nhãn cho một phần tử <input> -->
+                 <li><label id="Data1">Data 1:</label></li>
+                 <li><label id="Data2">Data 2:</label></li>
+
+            </ul>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $.ajaxSetup({cache: false});
+            setInterval(function() {
+                $.getJSON("IO.html", function(result){
+                    $('#Start').text("Start: " + result["start"]);
+                    $('#Stop').text("Stop: " + result["stop"]);
+                    $('#Data1').text("Data1: " + result["data1"]);
+                    $('#Data2').text("Data2: " + result["data2"]);
+                });  
+            }, 1000);
+        });
+    </script>
+</html>
